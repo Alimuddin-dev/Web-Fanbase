@@ -16,29 +16,40 @@
         href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Poppins:ital,wght@0,400;0,500;0,700;1,500;1,700&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
     <title>Welcome to my Website</title>
 </head>
 
 <body>
     <!-- navbar start -->
-    <header id="header">
-        <nav class="navtitle">
-            <h2>Ali <span>Dev</span></h2>
+    <div class="wrapper">
+        <nav>
+            <div class="container-flex">
+                <div class="brand">
+                    <a href="">Nancy<span>FansBase</span></a>
+                </div>
+                <div class="burger">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <div class="bg-sidebar"></div>
+                <ul class="sidebar">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#galery">Galery</a></li>
+                    <li><a href="#project">Project</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </div>
         </nav>
-        <nav class="navbar">
-            <a href="#">Home</a>
-            <a href="#about">About</a>
-            <a href="#project">Project</a>
-            <a href="#">Contact</a>
-        </nav>
-    </header>
+    </div>
     <!-- navbar end -->
     <!-- section start -->
     <section class="home" id="home">
         <div class="row">
             <!-- <div class="gambar">
-          <img src="img.jpg" alt="" />
-        </div> -->
+                            <img src="img.jpg" alt="" />
+                        </div> -->
             <div id="image-slider" class="splide">
                 <div class="splide__track">
                     <ul class="splide__list">
@@ -65,14 +76,7 @@
                 </div>
 
             </div>
-            <script>
-                document.addEventListener('DOMContentLoaded', function () {
-                    new Splide('#image-slider').mount();
-                });
 
-
-
-            </script>
             <div class="main">
                 <div class="loader">
                     <div class="box1"></div>
@@ -80,79 +84,87 @@
                     <div class="box3"></div>
                 </div>
                 <p><span>HALO</span> ,Selamat datang</p>
-                <p>Perkenalkan nama saya <span>Ali</span></p>
-                <a href="#about"><button class="tombol">KLIK DISINI</button></a>
+                <p>Ini adalah website fanboy <span>Nancy Momoland</span></p>
+                <a href="#galery"><button class="tombol">KLIK DISINI</button></a>
             </div>
         </div>
     </section>
     <!-- section end -->
-    <!-- about start -->
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <div class="content">
-            <div class="content-left">
-                <p>Perkenalkan nama saya Alimuddin, bisa dipanggil Ali.</p>
-                <p>Saya adalah seorang web developer pemula</p>
-                <p>
-                    Umur saya sekarang 22 tahun, dan masih berstatus mahasiswa aktif
-                </p>
+    <!-- gallery start -->
+    <section id="galery">
+
+        <h2>Galery</h2>
+        <div class="galery">
+            <div>
+                <img src="peakpx.jpg" alt="">
             </div>
-            <div class="content-right">
-                <img src="aku.jpg" alt="" />
+            <div class="v-strecth">
+                <img src="wp2362412-momoland-nancy-wallpapers.jpg" alt="">
             </div>
+            <div class="h-strecth">
+                <img src="wp2362455-momoland-nancy-wallpapers.jpg" alt="">
+            </div>
+            <div>
+                <img src="wp3097224-nancy-jewel-wallpapers (1).jpg" alt="">
+            </div>
+            <div class="big-strecth">
+                <img src="wp5090683-momoland-nancy-4k-wallpapers.jpg" alt="">
+            </div>
+            <div>
+                <img src="wp2362379-momoland-nancy-wallpapers.jpg" alt="">
+            </div>
+            <div class="h-strecth">
+                <img src="wp5090687-momoland-nancy-4k-wallpapers.jpg" alt="">
+            </div>
+            <div>
+                <img src="wp5090691-momoland-nancy-4k-wallpapers.jpg" alt="">
+            </div>
+            <div>
+                <img src="wp2362379-momoland-nancy-wallpapers.jpg" alt="">
+            </div>
+            <div class="v-strecth">
+                <img src="peakpx (1).jpg" alt="">
+            </div>
+            <div>
+                <img src="peakpx (3).jpg" alt="">
+            </div>
+            <div>
+                <img src="peakpx (4).jpg" alt="">
+            </div>
+            <div class="h-strecth">
+                <img src="peakpx (5).jpg" alt="">
+            </div>
+            <div>
+                <img src="peakpx (6).jpg" alt="">
+            </div>
+            <div class="big-strecth">
+                <img src="peakpx (7).jpg" alt="">
+            </div>
+            <div>
+                <img src="peakpx (8).jpg" alt="">
+            </div>
+            <div>
+                <img src="peakpx (9).jpg" alt="">
+            </div>
+            <div class="h-strecth">
+                <img src="peakpx (10).jpg" alt="">
+            </div>
+
         </div>
-        <div class="content_life">
-            <h3>My Skill</h3>
-            <div class="row">
-                <div class="menu-card">
-                    <img src="css.png" alt="css" class="menu-card-img" />
-                    <progress value="75" max="100" style="--value: 75; --max: 100"></progress>
-                    <p class="skill">CSS</p>
-                </div>
-                <div class="menu-card">
-                    <img src="file_type_html_icon_130541.png" alt="html" class="menu-card-img" />
-                    <progress value="25" max="100" style="--value: 50; --max: 100"></progress>
-                    <p class="skill">CSS</p>
-                </div>
-                <div class="menu-card">
-                    <img src="php_icon_130857.png" alt="php" class="menu-card-img" />
-                    <progress value="25" max="100" style="--value: 25; --max: 100"></progress>
-                    <p class="skill">PHP</p>
-                </div>
-                <div class="menu-card">
-                    <img src="codeigniter_plain_logo_icon_146591.png" alt="php" class="menu-card-img" />
-                    <progress value="25" max="100" style="--value: 25; --max: 100"></progress>
-                    <p class="skill">CodeIgniter</p>
-                </div>
-            </div>
-            <h3>My other skills</h3>
-            <div class="row">
-                <div class="menu-card">
-                    <img src="adobe_premiere_pro_premiere_pro_multimedia_software_aplication_icon_191049.png"
-                        alt="adobepr" class="menu-card-img" />
-                    <progress value="90" max="100" style="--value: 90; --max: 100"></progress>
-                    <p class="skill">Adobe Primier Pro</p>
-                </div>
-                <div class="menu-card">
-                    <img src="software_multimedia_adobe_after_effect_visual_effect_icon_191053.png" alt="ae"
-                        class="menu-card-img" />
-                    <progress value="50" max="100" style="--value: 50; --max: 100"></progress>
-                    <p class="skill">Adobe After Effect</p>
-                </div>
-                <div class="menu-card">
-                    <img src="psd_file_design_graphic_digital_artwork_adobe_photoshop_icon_191032.png" alt="ps"
-                        class="menu-card-img" />
-                    <progress value="90" max="100" style="--value: 90; --max: 100"></progress>
-                    <p class="skill">Photoshop</p>
-                </div>
-            </div>
     </section>
-    <!-- about end -->
+    <!-- gallery end -->
     <!-- project start -->
     <section id="project" class="project">
         <h2>My Project</h2>
     </section>
     <!-- project end -->
+    <!-- my script -->
+    <script>
+        feather.replace();
+    </script>
+    <script src="js/script.js">
+
+    </script>
 </body>
 
 </html>
