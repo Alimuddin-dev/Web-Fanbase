@@ -24,10 +24,10 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: var(--bg);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1920' height='1080' preserveAspectRatio='none' viewBox='0 0 1920 1080'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1062%26quot%3b)' fill='none'%3e%3crect width='1920' height='1080' x='0' y='0' fill='rgba(209%2c 77%2c 114%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c790.376C171.563%2c804.278%2c375.456%2c899.499%2c505.908%2c787.208C640.449%2c671.399%2c523.307%2c434.11%2c599.923%2c273.976C678.9%2c108.909%2c941.719%2c46.624%2c947.745%2c-136.265C953.551%2c-312.477%2c749.167%2c-416.192%2c626.846%2c-543.165C511.244%2c-663.164%2c415.045%2c-823.815%2c252.053%2c-858.415C91.078%2c-892.587%2c-58.648%2c-781.5%2c-211.759%2c-721.186C-350.546%2c-666.514%2c-518.37%2c-645.207%2c-602.274%2c-521.874C-684.854%2c-400.488%2c-630.235%2c-238.491%2c-639.804%2c-91.99C-648.494%2c41.051%2c-685.767%2c169.609%2c-655.93%2c299.553C-621.213%2c450.752%2c-580.033%2c616.331%2c-455.824%2c709.275C-329.706%2c803.647%2c-157.003%2c777.653%2c0%2c790.376' fill='%23c6335c'%3e%3c/path%3e%3cpath d='M1920 1570.667C2021.394 1576.99 2132.353 1598.328 2217.275 1542.569 2302.05 1486.906 2326.183 1376.626 2360.741 1281.28 2392.776 1192.896 2437.9610000000002 1099.386 2410.493 1009.478 2383.786 922.062 2278.034 890.673 2219.865 820.1659999999999 2159.595 747.1120000000001 2150.945 627.1089999999999 2064.02 589.512 1977.029 551.887 1872.511 589.009 1788.984 633.8 1713.599 674.225 1678.901 757.983 1625.395 824.723 1574.3229999999999 888.427 1510.4189999999999 940.533 1481.777 1016.993 1448.371 1106.169 1419.027 1204.682 1449.232 1294.993 1480.413 1388.222 1560.805 1457.243 1645.636 1506.9180000000001 1728.333 1555.344 1824.354 1564.702 1920 1570.667' fill='%23d96b89'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1062'%3e%3crect width='1920' height='1080' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
   color: rgb(0, 0, 0);
+  background-repeat: repeat-x;
   min-height: 3000px;
-  background-color: var(--bg-color);
   min-height: 9000px;
 }
 
@@ -422,24 +422,123 @@ nav ul li a {
     margin-left: 0px;
   }
 }
+.main {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  text-shadow: -7px -1px 8px rgba(1, 0, 0, 0.23);
+}
 
 .main span {
   color: var(--main-color);
 }
 
-.main button {
-  padding: 15px 30px;
-  font-weight: bold;
-  width: 20vh;
-  margin-top: 1rem;
-  font-size: 18px;
-  outline: none;
-  border: none;
-  border-radius: 10px;
-  transition: 0.5s;
-  background: var(--bg-color);
+.fancy {
+  background-color: transparent;
+  border: 2px solid var(--main-color);
+  border-radius: 0;
+  box-sizing: border-box;
   color: var(--main-color);
-  box-shadow: 0 0 10px #363636, inset 0 0 10px #363636;
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 1.25em 2em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+  font-size: 13px;
+}
+
+.fancy::before {
+  content: " ";
+  width: 1.5625rem;
+  height: 2px;
+  background: var(--main-color);
+  top: 50%;
+  left: 1.5em;
+  position: absolute;
+  transform: translateY(-50%);
+  transform-origin: center;
+  transition: background 0.3s linear, width 0.3s linear;
+}
+
+.fancy .text {
+  font-size: 1.125em;
+  line-height: 1.33333em;
+  padding-left: 2em;
+  display: block;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+.fancy .top-key {
+  height: 2px;
+  width: 1.5625rem;
+  top: -2px;
+  left: 0.625rem;
+  position: absolute;
+  background: #000000;
+  transition: width 0.5s ease-out, left 0.3s ease-out;
+}
+
+.fancy .bottom-key-1 {
+  height: 2px;
+  width: 1.5625rem;
+  right: 1.875rem;
+  bottom: -2px;
+  position: absolute;
+  background: #000000;
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy .bottom-key-2 {
+  height: 2px;
+  width: 0.625rem;
+  right: 0.625rem;
+  bottom: -2px;
+  position: absolute;
+  background: #000000;
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy:hover {
+  color: black;
+  background: var(--main-color);
+}
+
+.fancy:hover::before {
+  width: 0.9375rem;
+  background: rgb(0, 0, 0);
+}
+
+.fancy:hover .text {
+  color: rgb(0, 0, 0);
+  padding-left: 1.5em;
+}
+
+.fancy:hover .top-key {
+  left: -2px;
+  width: 0px;
+}
+
+.fancy:hover .bottom-key-1,
+.fancy:hover .bottom-key-2 {
+  right: 0;
+  width: 0;
 }
 
 .main button:hover {
