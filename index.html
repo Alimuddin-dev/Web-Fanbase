@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="
+    https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
+    "></script>
+    <link href="
+    https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+    " rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Poppins:ital,wght@0,400;0,500;0,700;1,500;1,700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Welcome to my Website</title>
+</head>
+
+<body>
+    <!-- navbar start -->
+    <header id="header">
+        <nav class="navtitle">
+            <h2>Ali <span>Dev</span></h2>
+        </nav>
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#project">Project</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <!-- navbar end -->
+    <!-- section start -->
+    <section class="home" id="home">
+        <div class="row">
+            <!-- <div class="gambar">
+          <img src="img.jpg" alt="" />
+        </div> -->
+            <div id="image-slider" class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <img src="wp3097224-nancy-jewel-wallpapers (1).jpg">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="wp2362412-momoland-nancy-wallpapers.jpg">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="wp2362455-momoland-nancy-wallpapers.jpg">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="wp5090687-momoland-nancy-4k-wallpapers.jpg">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="wp5090691-momoland-nancy-4k-wallpapers.jpg">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="wp2362379-momoland-nancy-wallpapers.jpg">
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    new Splide('#image-slider').mount();
+                });
+
+
+
+            </script>
+            <div class="main">
+                <div class="loader">
+                    <div class="box1"></div>
+                    <div class="box2"></div>
+                    <div class="box3"></div>
+                </div>
+                <p><span>HALO</span> ,Selamat datang</p>
+                <p>Perkenalkan nama saya <span>Ali</span></p>
+                <a href="#about"><button class="tombol">KLIK DISINI</button></a>
+            </div>
+        </div>
+    </section>
+    <!-- section end -->
+    <!-- about start -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <div class="content">
+            <div class="content-left">
+                <p>Perkenalkan nama saya Alimuddin, bisa dipanggil Ali.</p>
+                <p>Saya adalah seorang web developer pemula</p>
+                <p>
+                    Umur saya sekarang 22 tahun, dan masih berstatus mahasiswa aktif
+                </p>
+            </div>
+            <div class="content-right">
+                <img src="aku.jpg" alt="" />
+            </div>
+        </div>
+        <div class="content_life">
+            <h3>My Skill</h3>
+            <div class="row">
+                <div class="menu-card">
+                    <img src="css.png" alt="css" class="menu-card-img" />
+                    <progress value="75" max="100" style="--value: 75; --max: 100"></progress>
+                    <p class="skill">CSS</p>
+                </div>
+                <div class="menu-card">
+                    <img src="file_type_html_icon_130541.png" alt="html" class="menu-card-img" />
+                    <progress value="25" max="100" style="--value: 50; --max: 100"></progress>
+                    <p class="skill">CSS</p>
+                </div>
+                <div class="menu-card">
+                    <img src="php_icon_130857.png" alt="php" class="menu-card-img" />
+                    <progress value="25" max="100" style="--value: 25; --max: 100"></progress>
+                    <p class="skill">PHP</p>
+                </div>
+                <div class="menu-card">
+                    <img src="codeigniter_plain_logo_icon_146591.png" alt="php" class="menu-card-img" />
+                    <progress value="25" max="100" style="--value: 25; --max: 100"></progress>
+                    <p class="skill">CodeIgniter</p>
+                </div>
+            </div>
+            <h3>My Skill other</h3>
+            <div class="row">
+                <div class="menu-card">
+                    <img src="adobe_premiere_pro_premiere_pro_multimedia_software_aplication_icon_191049.png"
+                        alt="adobepr" class="menu-card-img" />
+                    <progress value="90" max="100" style="--value: 90; --max: 100"></progress>
+                    <p class="skill">Adobe Primier Pro</p>
+                </div>
+                <div class="menu-card">
+                    <img src="software_multimedia_adobe_after_effect_visual_effect_icon_191053.png" alt="ae"
+                        class="menu-card-img" />
+                    <progress value="50" max="100" style="--value: 50; --max: 100"></progress>
+                    <p class="skill">Adobe After Effect</p>
+                </div>
+                <div class="menu-card">
+                    <img src="psd_file_design_graphic_digital_artwork_adobe_photoshop_icon_191032.png" alt="ps"
+                        class="menu-card-img" />
+                    <progress value="90" max="100" style="--value: 90; --max: 100"></progress>
+                    <p class="skill">Photoshop</p>
+                </div>
+            </div>
+    </section>
+    <!-- about end -->
+    <!-- project start -->
+    <section id="project" class="project">
+        <h2>My Project</h2>
+    </section>
+    <!-- project end -->
+</body>
+
+</html>

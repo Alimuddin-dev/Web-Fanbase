@@ -1,0 +1,575 @@
+:root {
+  --main-color: #8fff01;
+  --bg-color: #000;
+  --second-color: rgba(206, 197, 197, 0.171);
+  --progress-bar-color: #cfd8dc;
+  --progress-value-color: #2196f3;
+  --progress-empty-color-h: 4.1;
+  --progress-empty-color-s: 89.6;
+  --progress-empty-color-l: 58.4;
+  --progress-filled-color-h: 122.4;
+  --progress-filled-color-s: 39.4;
+  --progress-filled-color-l: 49.2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: rgb(0, 0, 0);
+  min-height: 3000px;
+  background-color: var(--bg-color);
+  min-height: 9000px;
+}
+/* navbar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-bottom: 1px solid var(--second-color);
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+.navtitle {
+  color: #fff;
+  font-size: 2rem;
+}
+.navtitle span {
+  color: var(--main-color);
+  font-style: italic;
+}
+header .navbar a {
+  padding: 10px;
+  color: #fff;
+  font-weight: bold;
+}
+header .navbar a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 0 1rem;
+}
+
+header .navbar a:hover {
+  color: var(--main-color);
+}
+header .navbar a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--main-color);
+  transform: scaleX(0);
+  transition: 0.2s ease-in;
+}
+header .navbar a:hover::after {
+  transform: scaleX(0.5);
+}
+
+/* section style */
+.home .row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 720px;
+  padding-top: 300px;
+}
+.home button {
+  background-color: var(--main-color);
+}
+
+/* .home img {
+  width: 500px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  object-fit: cover;
+} */
+.splide {
+  width: 30%;
+}
+.splide__slide {
+  color: var(--main-color);
+}
+
+.splide__slide img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  padding: 10px;
+  border-radius: 10%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  color: #fff;
+  padding-top: 10px;
+  font-size: 2rem;
+}
+.loader {
+  width: 112px;
+  height: 112px;
+  margin-bottom: 100px;
+}
+
+.box1,
+.box2,
+.box3 {
+  border: 16px solid var(--main-color);
+  box-sizing: border-box;
+  position: absolute;
+  display: block;
+}
+
+.box1 {
+  width: 112px;
+  height: 48px;
+  margin-top: 64px;
+  margin-left: 0px;
+  animation: abox1 4s 1s forwards ease-in-out infinite;
+}
+
+.box2 {
+  width: 48px;
+  height: 48px;
+  margin-top: 0px;
+  margin-left: 0px;
+  animation: abox2 4s 1s forwards ease-in-out infinite;
+}
+
+.box3 {
+  width: 48px;
+  height: 48px;
+  margin-top: 0px;
+  margin-left: 64px;
+  animation: abox3 4s 1s forwards ease-in-out infinite;
+}
+
+@keyframes abox1 {
+  0% {
+    width: 112px;
+    height: 48px;
+    margin-top: 64px;
+    margin-left: 0px;
+  }
+
+  12.5% {
+    width: 48px;
+    height: 48px;
+    margin-top: 64px;
+    margin-left: 0px;
+  }
+
+  25% {
+    width: 48px;
+    height: 48px;
+    margin-top: 64px;
+    margin-left: 0px;
+  }
+
+  37.5% {
+    width: 48px;
+    height: 48px;
+    margin-top: 64px;
+    margin-left: 0px;
+  }
+
+  50% {
+    width: 48px;
+    height: 48px;
+    margin-top: 64px;
+    margin-left: 0px;
+  }
+
+  62.5% {
+    width: 48px;
+    height: 48px;
+    margin-top: 64px;
+    margin-left: 0px;
+  }
+
+  75% {
+    width: 48px;
+    height: 112px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  87.5% {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  100% {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+}
+
+@keyframes abox2 {
+  0% {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  12.5% {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  25% {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  37.5% {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  50% {
+    width: 112px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  62.5% {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 64px;
+  }
+
+  75% {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 64px;
+  }
+
+  87.5% {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 64px;
+  }
+
+  100% {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 64px;
+  }
+}
+
+@keyframes abox3 {
+  0% {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 64px;
+  }
+
+  12.5% {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 64px;
+  }
+
+  25% {
+    width: 48px;
+    height: 112px;
+    margin-top: 0px;
+    margin-left: 64px;
+  }
+
+  37.5% {
+    width: 48px;
+    height: 48px;
+    margin-top: 64px;
+    margin-left: 64px;
+  }
+
+  50% {
+    width: 48px;
+    height: 48px;
+    margin-top: 64px;
+    margin-left: 64px;
+  }
+
+  62.5% {
+    width: 48px;
+    height: 48px;
+    margin-top: 64px;
+    margin-left: 64px;
+  }
+
+  75% {
+    width: 48px;
+    height: 48px;
+    margin-top: 64px;
+    margin-left: 64px;
+  }
+
+  87.5% {
+    width: 48px;
+    height: 48px;
+    margin-top: 64px;
+    margin-left: 64px;
+  }
+
+  100% {
+    width: 112px;
+    height: 48px;
+    margin-top: 64px;
+    margin-left: 0px;
+  }
+}
+
+.main span {
+  color: var(--main-color);
+}
+.main button {
+  padding: 15px 30px;
+  font-weight: bold;
+  width: 20vh;
+  margin-top: 1rem;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  transition: 0.5s;
+  background: var(--bg-color);
+  color: var(--main-color);
+  box-shadow: 0 0 10px #363636, inset 0 0 10px #363636;
+}
+
+.main button:hover {
+  animation: a 0.5s 1 linear;
+}
+
+@keyframes a {
+  0% {
+    transform: scale(0.7, 1.3);
+  }
+
+  25% {
+    transform: scale(1.3, 0.7);
+  }
+
+  50% {
+    transform: scale(0.7, 1.3);
+  }
+
+  75% {
+    transform: scale(1.3, 0.7);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+/* about style */
+.about,
+.project {
+  padding: 8rem 7% 1.4rem;
+  margin-top: 25rem;
+}
+.about h2,
+.project h2 {
+  color: var(--main-color);
+  text-align: left;
+  font-size: 2.6rem;
+  margin-bottom: 1.4rem;
+}
+.content {
+  display: flex;
+}
+.about .content_life {
+  margin-top: 5rem;
+}
+.about .content_life p {
+  color: #fff;
+  font-size: 1.2rem;
+}
+.content-left {
+  width: 50%;
+  margin-top: 5rem;
+}
+.about .content-left p {
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: right;
+}
+.content .content-right img {
+  width: 350px;
+  aspect-ratio: 4/3;
+  border-end-start-radius: 50%;
+  object-position: left bottom;
+  object-fit: cover;
+  padding-left: 1rem;
+}
+.about .content-right p {
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: left;
+}
+.content .content-left img {
+  display: inline-flex;
+  width: 300px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: right;
+}
+.about .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  justify-content: center;
+}
+.menu-card {
+  text-align: center;
+  padding: 1rem;
+}
+.about .row .menu-card {
+  padding-top: 2.4rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.about .row .menu-card img {
+  object-fit: cover;
+  object-position: center center;
+  width: 150px;
+  aspect-ratio: 1/1;
+  /* border-radius: 50%; */
+  margin: 1.4rem;
+}
+.about h3 {
+  color: #fff;
+  margin-top: 3rem;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+progress[value] {
+  /* display: block; */
+  position: relative;
+  appearance: none;
+  width: 70%;
+  height: 6px;
+  border: 0;
+  --border-radius: 10px;
+  border-radius: var(--border-radius);
+  counter-reset: progress var(--progress-value);
+  --progress-value-string: counter(progress) "%";
+  --progress-max-decimal: calc(var(--value, 0) / var(--max, 0));
+  --progress-value-decimal: calc(var(--progress-value, 0) / var(--max, 0));
+  @supports selector(::-moz-progress-bar) {
+    --progress-value-decimal: calc(var(--value, 0) / var(--max, 0));
+  }
+  --progress-value-percent: calc(var(--progress-value-decimal) * 100%);
+  --progress-value-color: hsl(
+    calc(
+        (
+            var(--progress-empty-color-h) +
+              (var(--progress-filled-color-h) - var(--progress-empty-color-h)) *
+              var(--progress-value-decimal)
+          ) * 1deg
+      )
+      calc(
+        (
+            var(--progress-empty-color-s) +
+              (var(--progress-filled-color-s) - var(--progress-empty-color-s)) *
+              var(--progress-value-decimal)
+          ) * 1%
+      )
+      calc(
+        (
+            var(--progress-empty-color-l) +
+              (var(--progress-filled-color-l) - var(--progress-empty-color-l)) *
+              var(--progress-value-decimal)
+          ) * 1%
+      )
+  );
+  animation: calc(3s * var(--progress-max-decimal)) linear 0.5s 1 normal both
+    progress;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: var(--progress-bar-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+progress[value]::-webkit-progress-value {
+  width: var(--progress-value-percent) !important;
+  background-color: var(--progress-value-color);
+  border-radius: var(--border-radius);
+}
+
+progress[value]::-moz-progress-bar {
+  width: var(--progress-value-percent) !important;
+  background-color: var(--progress-value-color);
+  border-radius: var(--border-radius);
+}
+
+progress[value]::after {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --size: 32px;
+  width: var(--size);
+  height: var(--size);
+  position: absolute;
+  left: var(--progress-value-percent);
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--progress-value-color);
+  border-radius: 50%;
+  content: attr(value);
+  content: var(--progress-value-string, var(--value));
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+}
+
+@keyframes progress {
+  from {
+    --progress-value: 0;
+  }
+  to {
+    --progress-value: var(--value);
+  }
+}
+/* project style */
+.project {
+  color: var(--main-color);
+}
